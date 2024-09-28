@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>wemeet</title>
+    <title>Invinity</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo2.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -39,8 +39,8 @@
                     <div class="row align-items-center justify-content-between no-gutters">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
-                                <a href="index.html">
-                                    <img src="img/logo.png" alt="">
+                                <a style="color: white;" href="#" >
+                                    <img style="max-height: 60px; width: auto;" src="img/logo2.png" alt="" > Invinity
                                 </a>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                             <div class="buy_ticket">
-                                <a href="#" class="boxed-btn-white">Buy Ticket</a>
+                                <a href="#" class="boxed-btn-white">Call Paper</a>
                             </div>
                         </div>
                         <div class="col-12">
@@ -109,7 +109,7 @@
                     <div class="col-xl-4 col-md-6 col-lg-4">
                         <div class="single_date">
                             <i class="ti-location-pin"></i>
-                            <span>City Hall, New York City</span>
+                            <span>Surabaya, Indonesia</span>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6 col-lg-3">
@@ -527,7 +527,7 @@
                                     <li><a target="_blank" href="#">Instagram</a></li>
                                     <li><a target="_blank" href="#">Youtube</a></li>
                                 </ul>
-    
+
                             </div>
                         </div>
                         <div class="col-xl-4 col-md-4 col-lg-4">
@@ -551,7 +551,7 @@
                                     200, D-block, Green lane USA <br>
                                     edumark@contact.com <br>
                                     +10 367 467 8934
-                                    
+
                                 </p>
                             </div>
                         </div>
