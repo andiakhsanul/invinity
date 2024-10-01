@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\seminarController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -10,9 +11,9 @@ Route::get('/', function () {
 //     return view('homepage');
 // });
 
-Route::get('/seminar', function () {
-    return view('conference');
-})->name('seminar');
+Route::get('/seminar', [seminarController::class, 'index'])->name('seminar.index');
+Route::get('/seminar/create', [seminarController::class, 'create'])->name('seminar.create');
+Route::post('/seminar/store', [seminarController::class, 'store'])->name('seminar.store');
 
 Route::get('/paper', function () {
     return view('paper');
@@ -25,6 +26,8 @@ Route::get('/about', function () {
 Route::get('/guide', function () {
     return view('guidepaper');
 })->name('guide');
+
+
 
 
 Route::prefix('admin')->group(function(){
