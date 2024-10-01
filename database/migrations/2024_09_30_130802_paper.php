@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('paper', function (Blueprint $table) {
             $table->id();
             $table->string('full_name');
+            $table->string('nationality');
             $table->string('country_of_residence');
             $table->string('institution');
             $table->string('profession');
@@ -21,6 +22,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('student_number');
             $table->string('screenshot_proof');
+            $table->string('payment_methods');
+            $table->string('payment_proof');
             $table->string('document'); // Upload paper document
             $table->string('poster');      // Upload poster image
             $table->unsignedBigInteger('user_id')->unique(); // Foreign key for user
