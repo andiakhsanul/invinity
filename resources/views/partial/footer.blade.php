@@ -27,7 +27,7 @@
                                 <ul>
                                     <li><a target="_blank" href="{{ route('about')}}">About</a></li>
                                     <li><a target="_blank" href="{{ route('paper')}}">Paper</a></li>
-                                    <li><a target="_blank" href="{{ route('seminar')}}">Seminar</a></li>
+                                    <li><a target="_blank" href="{{ route('seminar.index')}}">Seminar</a></li>
                                 </ul>
                             </div>
                         </div>

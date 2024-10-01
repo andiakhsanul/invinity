@@ -199,25 +199,17 @@
 
 
             </div>
+        </div>
 
-    </div>
-    </form>
-</div>
-@include('partial.footer')
 
-<!-- Include SweetAlert -->
-{{-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<script>
-    function showAlertAndSubmit() {
-        // Show SweetAlert modal
-        swal({
-            title: "INVINITY (International Conference Visual, Nature, Serenity)",
-            content: {
-                element: "div",
-                attributes: {
-                    innerHTML: "We have received your registration.<br>Contact Persons:<br>Call Paper +62 895-1755-5799 (Aisya)"
-                },
+        <script>
+          function showAlert() {
+    swal({
+        title: "INVINITY (International Conference Visual, Nature, Serenity)",
+        content: {
+            element: "div",
+            attributes: {
+                innerHTML: "We have received your registration.<br>Contact Persons:<br>Call Paper +62 895-1755-5799 (Aisya)"
             },
             icon: "success",
             button: "Ok!",
@@ -238,4 +230,6 @@
 
 </body>
 
-</html>
+    </body>
+    </html>
+    @include('partial.footer')
