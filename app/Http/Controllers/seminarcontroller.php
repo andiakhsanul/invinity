@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\seminar;
+use Illuminate\Support\Facades\Auth;
 
 class seminarcontroller extends Controller
 {
@@ -20,6 +21,7 @@ class seminarcontroller extends Controller
 
     public function store(Request $request)
     {
+
         $request->validate([
             'full_name' => 'required|string|max:255',
             'country_of_residence' => 'required|string|max:255',
@@ -28,16 +30,34 @@ class seminarcontroller extends Controller
             'phone_number' => 'required|numeric',
             'email' => 'required|email|max:255',
             'student_number' => 'required|string|max:255',
-            'screenshot_proof' => 'required|string|max:255',
+            'screenshot_proof' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validasi untuk gambar
             'nationality' => 'required|string|max:255',
-            'user_id' => 'required|exists:users,id',
         ]);
 
-        seminar::create($request->all());
+        // Proses upload gambar screenshot proof
+        if ($request->hasFile('screenshot_proof')) {
+            $imageName = time() . '.' . $request->screenshot_proof->extension();
+            $request->screenshot_proof->move(public_path('uploads/seminar'), $imageName);
+        }
+
+        // Membuat seminar baru
+        seminar::create([
+            'full_name' => $request->full_name,
+            'country_of_residence' => $request->country_of_residence,
+            'institution' => $request->institution,
+            'profession' => $request->profession,
+            'phone_number' => $request->phone_number,
+            'email' => $request->email,
+            'student_number' => $request->student_number,
+            'screenshot_proof' => $imageName,
+            'nationality' => $request->nationality,
+            'user_id' => 1, // Mengambil user_id dari user yang sedang login
+        ]);
 
         return redirect()->route('seminar.index')
-                         ->with('success', 'Seminar created successfully.');
+            ->with('success', 'Seminar created successfully.');
     }
+
 
     // public function show($id)
     // {

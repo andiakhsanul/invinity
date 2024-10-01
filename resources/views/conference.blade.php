@@ -78,10 +78,10 @@
                         <label class="form-label my-3">Student Number (for certificate)<sup>*</sup></label>
                         <input type="text" name="student_number" class="form-control" required maxlength="255">
                     </div>
-                    <div class="form-item">
-                        <label for="formFile" class="form-label my-3">Screenshot of proof of following @invinityunair Instagram.<sup>*</sup></label>
-                        <input class="form-control" type="file" name="screenshot_proof" id="formFile" required>
-                    </div>
+                     <div class="form-item">
+        <label for="formFile" class="form-label my-3">Screenshot of proof of following @invinityunair Instagram.<sup>*</sup></label>
+        <input class="form-control" type="file" name="screenshot_proof" id="formFile" required>
+    </div>
                     <button type="submit" class="btn btn-outline-primary my-3">Submit</button>
                 </div>
             </div>
