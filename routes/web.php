@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\papercontroller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\seminarController;
 
@@ -55,8 +56,15 @@ Route::prefix('admin')->group(function(){
     Route::get('/all-payment', function () {
         return view('admin.payment.index');
     });
+    
 
 });
+
+
+Route::post('/paper/submit', [papercontroller::class, 'submit'])->name('paper.submit');
+Route::get('/paper/all', [papercontroller::class, 'index'])->name('paper.index');
+Route::get('/paper/edit/{id}', [papercontroller::class, 'edit'])->name('paper.edit');
+Route::get('/paper/update/{id}', [papercontroller::class, 'update'])->name('paper.update');
 
 
 
