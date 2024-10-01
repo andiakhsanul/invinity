@@ -94,7 +94,7 @@
                 </form>
             </div>
         </div>
-        <!-- Checkout Page End -->
+        @include('partial.footer')
 
   <script>
             function showAlert() {
@@ -112,5 +112,6 @@
   }
           </script>
           <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-      </body>
+
+        </body>
       </html>

@@ -1268,7 +1268,7 @@ h3 {
 /* line 121, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_slider.scss */
 .slider_area .single_date {
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -2239,7 +2239,7 @@ h3 {
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer_bg_1 {
-  background-color: #64c2ea;
+  background-color: #052649;
 }
 
 /* line 4, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
@@ -2260,8 +2260,8 @@ h3 {
 
 /* line 15, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .footer_top {
-  padding-top: 145px;
-  padding-bottom: 129px;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 767px) {
@@ -2486,6 +2486,79 @@ h3 {
 /* line 173, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_footer.scss */
 .footer .socail_links ul li a:hover {
   color: #fff !important;
+}
+
+.container2 {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.container2 .time{
+    text-align: center;
+    color: #64c2ea;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.timeline {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #64c2ea;
+    transform: translateX(-50%);
+}
+.timeline-event {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.timeline-event-left {
+    left: 0;
+}
+.timeline-event-right {
+    left: 50%;
+    transform: translateX(10%);
+}
+.timeline-event h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+.timeline-event p {
+    color: #333;
+    margin: 5px 0;
+}
+.timeline-event span.date {
+    color: #64c2ea;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+.timeline-icon {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    background: #64c2ea;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+    transform: translate(-50%, -50%);
 }
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/209/HTML/scss/_bradcam.scss */

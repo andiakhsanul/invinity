@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
 }
 
-.container {
+.container1 {
     width: 80%;
     margin: 50px auto;
     background-color: #fff;
@@ -20,7 +20,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.header {
+.header1 {
     background-color: #64c2ea;
     color: white;
     padding: 20px;
@@ -28,21 +28,21 @@ body {
     border-radius: 8px 8px 0 0;
 }
 
-.header h1 {
+.header1 h1 {
     font-size: 2.5rem;
 }
 
-.content {
+.conten1t {
     padding: 20px;
 }
 
-.content h2 {
+.content1 h2 {
     font-size: 2rem;
     color: #2D3E50;
     margin-bottom: 20px;
 }
 
-.content p {
+.content1 p {
     margin-bottom: 20px;
     font-size: 1rem;
 }

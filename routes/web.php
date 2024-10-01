@@ -12,15 +12,19 @@ Route::get('/', function () {
 
 Route::get('/seminar', function () {
     return view('conference');
-});
+})->name('seminar');
 
 Route::get('/paper', function () {
     return view('paper');
-});
+})->name('paper');
 
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/guide', function () {
+    return view('guidepaper');
+})->name('guide');
 
 
 Route::prefix('admin')->group(function(){

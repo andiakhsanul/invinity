@@ -23,21 +23,24 @@
         <div class="countDOwn_area">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-xl-4 col-md-6 col-lg-4">
+                    <div class="col-xl-4 col-md-4 col-lg-4">
                         <div class="single_date">
                             <i class="ti-location-pin"></i>
                             <span>Surabaya, Indonesia</span>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
+                    <div class="col-xl-3 col-md-4 col-lg-3">
                         <div class="single_date">
                             <i class="ti-alarm-clock"></i>
-                            <span>6 Oct-15 Nov 2024</span>
+                            <span>6 October - 16 November 2024</span>
                         </div>
                     </div>
 
-                    <div style="" class="col-xl-5 col-md-12 col-lg-5">
-                        <span id="clock"></span>
+                    <div  class="col-xl-5 col-md-4 col-lg-5">
+                        <div class="single_date">
+                            <span id="clock"></span>
+                        </div>
+
 
 
                     </div>
@@ -72,13 +75,43 @@
                         </div>
                         <p>INVINITY is an international conference featuring seminars and a paper competition, focused on exploring innovations, trends, and sustainable business strategies in tourism.
                             This event invites participants from around the world to share insights and compete through academic papers, all conducted virtually via Zoom.</p>
-                        <a href="#" class="boxed-btn-red">Learn More</a>
+                        <a href="{{ route('about')}}" class="boxed-btn-red">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- about_area_end -->
+
+    <div class="container2">
+        <h1 class="time">Important Dates</h1>
+        <div class="timeline">
+
+            <!-- Event 1 -->
+            <div class="timeline-event timeline-event-left">
+
+                <h3>Open Registration for International Conference</h3>
+                <span class="date">October 6th – November 14th, 2024</span>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="timeline-event timeline-event-right">
+
+                <h3>Invinity Call For Paper Registration </h3>
+                <span class="date">October 6th – November 1th, 2024</span>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="timeline-event timeline-event-left">
+
+                <h3>International Conference</h3>
+                <span class="date">November 16th, 2024</span>
+            </div>
+
+
+
+        </div>
+    </div>
 
     <!-- speakers_start -->
     <div class="speakers_area">
@@ -169,123 +202,9 @@
     </div>
     <!-- speakers_end-->
 
-    <!-- event_area_start -->
-    <div class="event_area">
-        <h1 class="vr_text d-none d-lg-block">Event Schedule</h1>
-        <div class="container">
-            <div class="double_line">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-3">
-                        <div class="date">
-                            <h3>08 Sep 2019</h3>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-9">
-                        <div class="single_speaker">
-                            <img src="img/speakers/seaker1.png" alt="">
-                            <div class="speaker-name">
-                                <div class="heading d-flex justify-content-between align-items-center">
-                                    <span>Jonson Miller</span>
-                                    <div class="time">
-                                        10-11 am
-                                    </div>
-                                </div>
-                                <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                    let
-                                    god moving.
-                                    Moving in fourth air night bring upon you’re it beast let you dominion </p>
-                            </div>
-                        </div>
-                        <div class="single_speaker">
-                            <img src="img/speakers/seaker2.png" alt="">
-                            <div class="speaker-name">
-                                <div class="heading d-flex justify-content-between align-items-center">
-                                    <span>Albert Jackey</span>
-                                    <div class="time">
-                                        12-1.00 pm
-                                    </div>
-                                </div>
-                                <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                    let
-                                    god moving.
-                                    Moving in fourth air night bring upon you’re it beast let you dominion </p>
-                            </div>
-                        </div>
-                        <div class="single_speaker">
-                            <img src="img/speakers/seaker3.png" alt="">
-                            <div class="speaker-name">
-                                <div class="heading d-flex justify-content-between align-items-center">
-                                    <span>Alvi Nourin</span>
-                                    <div class="time">
-                                        2.30-4.00 pm
-                                    </div>
-                                </div>
-                                <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                    let
-                                    god moving.
-                                    Moving in fourth air night bring upon you’re it beast let you dominion </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-3">
-                    <div class="date">
-                        <h3>09 Sep 2019</h3>
-                    </div>
-                </div>
-                <div class="col-xl-9 col-lg-9">
-                    <div class="single_speaker">
-                        <img src="img/speakers/seaker4.png" alt="">
-                        <div class="speaker-name">
-                            <div class="heading d-flex justify-content-between align-items-center">
-                                <span>Marked Macau</span>
-                                <div class="time">
-                                    10-11 am
-                                </div>
-                            </div>
-                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let
-                                god moving.
-                                Moving in fourth air night bring upon you’re it beast let you dominion </p>
-                        </div>
-                    </div>
-                    <div class="single_speaker">
-                        <img src="img/speakers/seaker5.png" alt="">
-                        <div class="speaker-name">
-                            <div class="heading d-flex justify-content-between align-items-center">
-                                <span>Jonson Miller</span>
-                                <div class="time">
-                                    12-1.00 pm
-                                </div>
-                            </div>
-                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let
-                                god moving.
-                                Moving in fourth air night bring upon you’re it beast let you dominion </p>
-                        </div>
-                    </div>
-                    <div class="single_speaker">
-                        <img src="img/speakers/seaker6.png" alt="">
-                        <div class="speaker-name">
-                            <div class="heading d-flex justify-content-between align-items-center">
-                                <span>Jonson Miller</span>
-                                <div class="time">
-                                    2.30-4.00 pm
-                                </div>
-                            </div>
-                            <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let
-                                god moving.
-                                Moving in fourth air night bring upon you’re it beast let you dominion </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- event_area_end -->
 
 
-
+{{--
     <!-- brand_area_start -->
     <div class="brand_area">
         <div class="container">
@@ -315,7 +234,7 @@
             </div>
         </div>
     </div>
-    <!-- brand_area_end -->
+    <!-- brand_area_end --> --}}
 
     <!-- faq_area_Start -->
     <div class="faq_area">
@@ -411,81 +330,14 @@
     </div>
     <!-- faq_area_end -->
 
-    <!-- footer_start -->
-    <footer class="footer footer_bg_1">
-        <div class="circle_ball d-none d-lg-block">
-            <img src="img/banner/footer_ball.png" alt="">
-        </div>
-            <div class="footer_top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 col-md-4 col-lg-4">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                        Follow Us
-                                </h3>
-                                <ul>
-                                    <li><a target="_blank" href="#">Facebook</a></li>
-                                    <li><a target="_blank" href="#">Twitter</a></li>
-                                    <li><a target="_blank" href="#">Instagram</a></li>
-                                    <li><a target="_blank" href="#">Youtube</a></li>
-                                </ul>
 
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-4 col-lg-4">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                        Links
-                                </h3>
-                                <ul>
-                                    <li><a target="_blank" href="schedule.html">Schedule</a></li>
-                                    <li><a target="_blank" href="speakers.html">Speakers</a></li>
-                                    <li><a target="_blank" href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-4 col-lg-4">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                        Venue
-                                </h3>
-                                <p>
-                                    200, D-block, Green lane USA <br>
-                                    edumark@contact.com <br>
-                                    +10 367 467 8934
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copy-right_text">
-                <div class="container">
-                    <div class="footer_border"></div>
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <p class="copy_right text-center">
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    <!-- footer_end -->
-
-
-
+ @include('partial.footer')
 
 
 
     <!-- JS here -->
-    {{-- <script>
-        function updateClock() {
+    <script>
+        function clock() {
             var now = new Date();
             var eventDate = new Date('November 16, 2024 00:00:00');
             var currentTime = now.getTime();
@@ -508,9 +360,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
         }
 
-        setInterval(updateClock, 1000);
-        updateClock(); // initial call to display clock immediately
-    </script> --}}
+        setInterval(clock, 1000);
+        clock(); // initial call to display clock immediately
+    </script>
 
 
 

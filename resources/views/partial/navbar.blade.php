@@ -39,7 +39,7 @@
                     <div class="row align-items-center justify-content-between no-gutters">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
-                                <a style="color: white; font-size:large; font-family:poppins" href="#">
+                                <a style="color: white; font-size:large; font-weight: 600; font-family:poppins" href="#">
                                     <img style="max-height: 60px; width: auto;" src="img/logo2.png" alt="" > Invinity
                                 </a>
                             </div>
@@ -50,27 +50,24 @@
                                     <ul id="navigation">
                                         <li><a  href="{{ route('landing')}}">Home</a></li>
                                         <li><a href="{{ route('about') }}">About</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                        <li><a href="#">Conference <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
+                                                <li><a href="{{ route('seminar') }}">Register</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                        <li><a href="#">Call Paper<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
+                                                <li><a href="{{ route('paper') }}">Submission</a></li>
+                                                <li><a href="{{ route('guide') }}">Guide Paper</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="Speakers.html">Speakers</a></li>
-                                        <li><a href="Venue.html">Venue</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
+                        <div class="col-md-2 d-none d-lg-block">
                             <div class="buy_ticket">
-                                <a href="#" class="boxed-btn-white">Call Paper</a>
+                                <a href="#" class="boxed-btn-white">Login</a>
                             </div>
                         </div>
                         <div class="col-12">

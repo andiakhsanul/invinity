@@ -163,6 +163,8 @@
                 </form>
             </div>
         </div>
+        @include('partial.footer')
+
         <script>
           function showAlert() {
     swal({
@@ -179,5 +181,7 @@
 }
         </script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
     </body>
     </html>
