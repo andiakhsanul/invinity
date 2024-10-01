@@ -52,8 +52,8 @@
                                         <li><a href="{{ route('about') }}">About</a></li>
                                         <li><a href="#">Conference <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="{{ route('seminar') }}">Register</a></li>
-                                            </ul>
+                                                <li><a href="{{ route('seminar.index') }}">Register</a></li>
+                                            </ul
                                         </li>
                                         <li><a href="#">Call Paper<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">

@@ -163,7 +163,7 @@
                 </form>
             </div>
         </div>
-        @include('partial.footer')
+
 
         <script>
           function showAlert() {
@@ -185,3 +185,4 @@
 
     </body>
     </html>
+    @include('partial.footer')
