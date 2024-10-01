@@ -1,101 +1,18 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Invinity</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo2.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-</head>
-
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-    <!-- header-start -->
-    <header>
-        <div class="header-area ">
-            <div id="sticky-header" class="main-header-area ">
-                <div class="container-fluid p-0">
-                    <div class="row align-items-center justify-content-between no-gutters">
-                        <div class="col-xl-2 col-lg-2">
-                            <div class="logo-img">
-                                <a style="color: white;" href="#" >
-                                    <img style="max-height: 60px; width: auto;" src="img/logo2.png" alt="" > Invinity
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8">
-                            <div class="main-menu  d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a class="active" href="index.html">home</a></li>
-                                        <li><a href="Schedule.html">Schedule</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="Speakers.html">Speakers</a></li>
-                                        <li><a href="Venue.html">Venue</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
-                            <div class="buy_ticket">
-                                <a href="#" class="boxed-btn-white">Call Paper</a>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- header-end -->
-
+ @include('partial.navbar')
     <!-- slider_area_start -->
     <div class="slider_area slider_bg_1">
         <div class="slider_text">
             <div class="container">
                 <div class="position_relv">
-                    <h1 class="opcity_text d-none d-lg-block">CONFIRENCE</h1>
+                    <h1 class="opcity_text d-none d-lg-block">CONFERENCE</h1>
                     <div class="row">
                         <div class="col-xl-9">
                             <div class="title_text">
-                                <h3>Digital Design <br>
+                                {{-- <h3>Digital Design <br>
                                     Conference <br>
-                                    2019 NYC</h3>
-                                <a href="#" class="boxed-btn-white">Add to your Calendar</a>
+                                    2019 NYC</h3> --}}
+                                {{-- <a href="#" class="boxed-btn-white">Let's Join</a> --}}
                             </div>
                         </div>
                     </div>
@@ -115,13 +32,16 @@
                     <div class="col-xl-3 col-md-6 col-lg-3">
                         <div class="single_date">
                             <i class="ti-alarm-clock"></i>
-                            <span>12-15 Sep 2019</span>
+                            <span>6 Oct-15 Nov 2024</span>
                         </div>
                     </div>
 
-                    <div class="col-xl-5 col-md-12 col-lg-5">
+                    <div style="" class="col-xl-5 col-md-12 col-lg-5">
                         <span id="clock"></span>
+
+
                     </div>
+
 
                 </div>
             </div>
@@ -148,12 +68,10 @@
                     <div class="about_info">
                         <div class="section_title">
                             <span class="sub_heading">Welcome To</span>
-                            <h3>The Biggest Design <br>
-                                Conference of the <br>
-                                Year 2019</h3>
+                            <h3>Invinity (International <br>Conference Visual <br>Nature Serenity)</h3>
                         </div>
-                        <p>Our set he for firmament morning sixth subdue darkness creeping gathered divide our let god.
-                            moving. Moving in fourth air night bring upon you’re it beast.</p>
+                        <p>INVINITY is an international conference featuring seminars and a paper competition, focused on exploring innovations, trends, and sustainable business strategies in tourism.
+                            This event invites participants from around the world to share insights and compete through academic papers, all conducted virtually via Zoom.</p>
                         <a href="#" class="boxed-btn-red">Learn More</a>
                     </div>
                 </div>
@@ -367,21 +285,6 @@
     <!-- event_area_end -->
 
 
-    <!-- resister_book_start -->
-    <div class="resister_book resister_bg_1">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="resister_text text-center">
-                        <h3>Register Now to Book <br>
-                            Your Presence</h3>
-                        <a href="#" class="boxed-btn-white">Book Now ($150) </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- resister_book_end -->
 
     <!-- brand_area_start -->
     <div class="brand_area">
@@ -581,6 +484,36 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
     <!-- JS here -->
+    {{-- <script>
+        function updateClock() {
+            var now = new Date();
+            var eventDate = new Date('November 16, 2024 00:00:00');
+            var currentTime = now.getTime();
+            var eventTime = eventDate.getTime();
+            var remTime = eventTime - currentTime;
+
+            var seconds = Math.floor(remTime / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+
+            hours = hours % 24;
+            minutes = minutes % 60;
+            seconds = seconds % 60;
+
+            hours = hours < 10 ? '0' + hours : hours;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // initial call to display clock immediately
+    </script> --}}
+
+
+
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>

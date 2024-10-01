@@ -4,11 +4,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('landing');
+
+// Route::get('/home', function () {
+//     return view('homepage');
+// });
+
+Route::get('/seminar', function () {
+    return view('conference');
 });
 
-Route::get('/home', function () {
-    return view('homepage');
+Route::get('/paper', function () {
+    return view('paper');
 });
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
 
 Route::prefix('admin')->group(function(){
@@ -17,7 +29,7 @@ Route::prefix('admin')->group(function(){
         return view('admin.dashboard');
     });
 
-    // Papers 
+    // Papers
     Route::get('/papers', function () {
         return view('admin.paper.index');
     });
