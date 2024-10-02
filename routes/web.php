@@ -29,42 +29,36 @@ Route::get('/guide', function () {
 })->name('guide');
 
 
-
-
-Route::prefix('admin')->group(function(){
+Route::prefix('admin')->group(function () {
 
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     });
 
     // Papers
-    Route::get('/papers', function () {
-        return view('admin.paper.index');
-    });
-
+    Route::get('/papers/all', [papercontroller::class, 'index'])->name('paper.index');
+    Route::get('/paper/edit/{id}', [papercontroller::class, 'edit'])->name('paper.edit');
+    Route::get('/paper/update/{id}', [papercontroller::class, 'update'])->name('paper.update');
+    
     // Seminars
     Route::get('/seminars', function () {
         return view('admin.seminars.index');
     });
-
+    
     // Participants
     Route::get('/participants', function () {
         return view('admin.participants.index');
     });
-
+    
     // Payment
     Route::get('/all-payment', function () {
         return view('admin.payment.index');
     });
     
-
 });
 
-
 Route::post('/paper/submit', [papercontroller::class, 'submit'])->name('paper.submit');
-Route::get('/paper/all', [papercontroller::class, 'index'])->name('paper.index');
-Route::get('/paper/edit/{id}', [papercontroller::class, 'edit'])->name('paper.edit');
-Route::get('/paper/update/{id}', [papercontroller::class, 'update'])->name('paper.update');
+
 
 
 
