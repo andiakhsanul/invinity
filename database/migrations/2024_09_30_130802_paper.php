@@ -25,9 +25,9 @@ return new class extends Migration
             $table->string('payment_methods');
             $table->string('payment_proof');
             $table->integer('status')->default(0);
-            $table->integer('reason')->nullable();
+            $table->string('reason')->nullable();
             $table->string('document')->nullable(); // Upload paper document
-            $table->string('poster');      // Upload poster image
+            $table->string('poster')->nullable();      // Upload poster image
             $table->unsignedBigInteger('user_id')->unique(); // Foreign key for user
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

@@ -14,6 +14,22 @@ class papercontroller extends Controller
         return view('admin.paper.index', compact('papers'));
     }
 
+    public function showApprove(Request $request, $id)
+    {
+        $payment_detail = papermodel::find($id);
+        return view('admin.paper.approve', compact('payment_detail'));
+    }
+    public function approve(Request $request, $id)
+    {
+
+        $payment = papermodel::find($id);
+        $payment->status = $request->input('status');
+        $payment->reason = $request->input('reason');
+        $payment->save();
+        
+        return redirect()->route('paper.index')->with('success', 'Successfully approved ' . $payment->full_name);
+    }
+
     public function submit(Request $request)
     {
 
@@ -53,9 +69,9 @@ class papercontroller extends Controller
                 'payment_methods' => $request->payment_methods,
                 'payment_proof' => $uploadedFiles['payment_proof'],
                 'status' => 0,
-                'poster' => '-',
-                'document' => '-',
-                'user_id' => Auth::user()->id ?? 1,
+                'poster' => NULL,
+                'document' => NULL,
+                'user_id' => Auth::user()->id,
             ];
 
             // Store the paper submission in the database
@@ -66,5 +82,46 @@ class papercontroller extends Controller
                 return response()->json(['success' => false, 'error' => 'There was an issue submitting the paper. Please try again.'], 500);
             }
         }
+    }
+
+    public function update(Request $request)
+    {
+        $paper = papermodel::where('user_id', Auth::user()->id)->first();
+
+        if (!$paper) {
+            return redirect()->back()->with('error', 'You have to wait yor payment have been approved');
+        }
+        if ($paper->status === 0 && $paper->status === 2) {
+            return redirect()->back()->with('error', 'You have to wait your payment have been approved');
+        }
+        if ($paper->status === 2) {
+            return redirect()->back()->with('error', 'Your payment was declined. Go to Submission Page for more detail');
+        }
+        
+        // Handle document upload
+        if ($request->hasFile('document')) {
+
+            $originalDocumentName = $request->file('document')->getClientOriginalName();
+            $uniqueDocumentName = time() . '_' . $originalDocumentName;
+
+            $documentPath = $request->file('document')->storeAs('documents', $uniqueDocumentName, 'public');
+
+            $paper->document = $documentPath;
+        }
+
+        // Handle poster upload
+        if ($request->hasFile('poster')) {
+
+            $originalPosterName = $request->file('poster')->getClientOriginalName();
+            $uniquePosterName = time() . '_' . $originalPosterName;
+
+            $posterPath = $request->file('poster')->storeAs('posters', $uniquePosterName, 'public');
+
+            $paper->poster = $posterPath;
+        }
+
+        $paper->save();
+
+        return redirect()->back()->with('success', 'Paper and Poster submitted Successfully');
     }
 }
