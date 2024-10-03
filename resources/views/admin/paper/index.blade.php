@@ -12,8 +12,7 @@
                         <th>Phone Number</th>
                         <th>Email</th>
                         <th>Student Number</th>
-                        <th>Nationality</th>
-                        <th>Proof</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,14 +25,8 @@
                             <td>{{ $item->phone_number }}</td>
                             <td>{{ $item->email }}</td>
                             <td>{{ $item->student_number }}</td>
-                            <td>{{ $item->nationality }}</td>
                             <td>
-                                <div class="d-flex flex-column gap-1">
-                                    <a class="btn btn-sm btn-primary" data-bs-toggle="modal"
-                                        data-bs-target="#screenshot{{ $item->id }}">Screenshoot</a>
-                                    <button class="btn btn-sm btn-success" data-bs-toggle="modal"
-                                        data-bs-target="#payment{{ $item->id }}">Payment</button>
-                                </div>
+                                <a href="{{ route('paper.approve', $item->id) }}" class="btn btn-sm btn-warning">Approve</a>
                             </td>
                         </tr>
                         

@@ -83,97 +83,132 @@
                             </tbody>
                         </table>
                     </div>
-
-
                 </div>
-                <div class="col-md-12 col-lg-6 col-xl-5">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-12">
-                            @if ($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
+                @if ($hasPapers->isNotEmpty())
+                    <div class="col-md-12 col-lg-6 col-xl-5">
+                        <div class="d-flex flex-column">
+                            <h3>You have already submitted at <span
+                                    class="text-primary">{{ $hasPapers->first()->created_at }}</span></h3>
+                            <h5>Status:
+                                @if ($hasPapers->first()->status == 0)
+                                    <p class="m-0 p-0 font-weight-bold">Waiting</p>
+                                @elseif ($hasPapers->first()->status == 1)
+                                    <p class="m-0 p-0 font-weight-bold text-success">Approved</p>
+                                @elseif ($hasPapers->first()->status == 2)
+                                    <p class="m-0 p-0 font-weight-bold text-warning">Declined</p>
+                                @else
+                                    <p class="m-0 p-0 font-weight-bold text-danger">Unknown Status</p>
+                                @endif
+                            </h5>
+                            <a href="{{ Storage::url($hasPapers->first()->payment_proof) }}"
+                                class="btn btn-outline-secondary" target="_blank">My Payment Proof</a>
+                            @if (!is_null($hasPapers->first()->reason))
+                                <h5 class="mt-3">Reason : {{ $hasPapers->first()->reason }}</h5>
                             @endif
-                            <div class="form-item">
-                                <label class="form-label my-3">Full Name <sup>*</sup></label>
-                                <input type="text" class="form-control" name="full_name" required>
+                            <p>Contact if you want to edit your submission</p>
+                        </div>
+                    </div>
+                @else
+                    @auth
+                        <div class="col-md-12 col-lg-6 col-xl-5">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12">
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                                    <div class="form-item">
+                                        <label class="form-label my-3">Full Name <sup>*</sup></label>
+                                        <input type="text" class="form-control" name="full_name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+
+                                </div>
                             </div>
+                            <div class="form-item">
+                                <label class="form-label my-3">Nationality <sup>*</sup></label>
+                                <input type="text" class="form-control" name="nationality" required>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label my-3">Country Of Residence<sup>*</sup></label>
+                                <input type="text" class="form-control" name="country_of_residence" required>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label my-3">Institution</label>
+                                <input type="text" class="form-control" name="institution">
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label my-3">Profession</label>
+                                <div class="form-check">
+                                    <input style="transform: scale(1.5);" class="form-check-input custom-radio"
+                                        type="radio" name="profession" id="flexRadioDefault1" required>
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Lecturer
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input style="transform: scale(1.5);" class="form-check-input custom-radio"
+                                        type="radio" name="profession" id="flexRadioDefault2" required>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Student
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label my-3">Phone Number<sup>*</sup></label>
+                                <input type="tel" class="form-control" name="phone_number" required>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label my-3">Email<sup>*</sup></label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label my-3">Student Number (for certificate)<sup>*</sup></label>
+                                <input type="num" class="form-control" name="student_number" required>
+                            </div>
+                            <div class="form-item">
+                                <label class="form-label my-3">Screenshot of proof of following
+                                    Instagram<sup>*</sup></label>
+                                <input class="form-control" type="file" id="formFile" name="screenshot_proof" required>
+                            </div>
+
+                            <div class="form-item">
+                                <label class="form-label my-3" for="paymentDropdown">Payment</label>
+                                <select class="form-select" id="paymentDropdown" name="payment_methods"
+                                    aria-label="Payment options" required>
+                                    <option selected disabled>Select Payment Method</option>
+                                    <option value="Paypal">PAYPAL @pandikaardi</option>
+                                    <option value="BRI">BRI 314301036962538 (a.n. Lidya Laksmi)</option>
+                                    <option value="MANDIRI">MANDIRI 1420020567409 (a.n. Irsyad Nur Fauzan)</option>
+                                    <option value="SEABANK">SEA BANK 901750960444 (a.n. Alysia Amalia)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-item">
+                                <label for="formFile" class="form-label my-3">Upload payment<sup>*</sup></label>
+                                <input class="form-control" name="payment_proof" type="file" id="formFile" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-outline-primary my-3">Submit</button>
                         </div>
-                        <div class="col-md-12 col-lg-6">
-
+                    @endauth
+                @endif
+                @guest
+                    <div class="col-md-12 col-lg-6 col-xl-5 border">
+                        <div class="d-flex flex-column justify-content center align-items-center">
+                            <h3 class="mt-5">-- Please <a href="{{ route('auth.login') }}"
+                                    class="text-primary">LOGIN</a> First --
+                            </h3>
                         </div>
                     </div>
-                    <div class="form-item">
-                        <label class="form-label my-3">Nationality <sup>*</sup></label>
-                        <input type="text" class="form-control" name="nationality" required>
-                    </div>
-                    <div class="form-item">
-                        <label class="form-label my-3">Country Of Residence<sup>*</sup></label>
-                        <input type="text" class="form-control" name="country_of_residence" required>
-                    </div>
-                    <div class="form-item">
-                        <label class="form-label my-3">Institution</label>
-                        <input type="text" class="form-control" name="institution">
-                    </div>
-                    <div class="form-item">
-                        <label class="form-label my-3">Profession</label>
-                        <div class="form-check">
-                            <input style="transform: scale(1.5);" class="form-check-input custom-radio" type="radio"
-                                name="profession" id="flexRadioDefault1" required>
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Lecturer
-                            </label>
-                        </div>
-
-                        <div class="form-check">
-                            <input style="transform: scale(1.5);" class="form-check-input custom-radio" type="radio"
-                                name="profession" id="flexRadioDefault2" required>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Student
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-item">
-                        <label class="form-label my-3">Phone Number<sup>*</sup></label>
-                        <input type="tel" class="form-control" name="phone_number" required>
-                    </div>
-                    <div class="form-item">
-                        <label class="form-label my-3">Email<sup>*</sup></label>
-                        <input type="email" class="form-control" name="email" required>
-                    </div>
-                    <div class="form-item">
-                        <label class="form-label my-3">Student Number (for certificate)<sup>*</sup></label>
-                        <input type="num" class="form-control" name="student_number" required>
-                    </div>
-                    <div class="form-item">
-                        <label class="form-label my-3">Screenshot of proof of following
-                            Instagram<sup>*</sup></label>
-                        <input class="form-control" type="file" id="formFile" name="screenshot_proof" required>
-                    </div>
-
-                    <div class="form-item">
-                        <label class="form-label my-3" for="paymentDropdown">Payment</label>
-                        <select class="form-select" id="paymentDropdown" name="payment_methods"
-                            aria-label="Payment options" required>
-                            <option selected disabled>Select Payment Method</option>
-                            <option value="Paypal">PAYPAL @pandikaardi</option>
-                            <option value="BRI">BRI 314301036962538 (a.n. Lidya Laksmi)</option>
-                            <option value="MANDIRI">MANDIRI 1420020567409 (a.n. Irsyad Nur Fauzan)</option>
-                            <option value="SEABANK">SEA BANK 901750960444 (a.n. Alysia Amalia)</option>
-                        </select>
-                    </div>
-
-                    <div class="form-item">
-                        <label for="formFile" class="form-label my-3">Upload payment<sup>*</sup></label>
-                        <input class="form-control" name="payment_proof" type="file" id="formFile" required>
-                    </div>
-
-                    <button type="submit" class="btn btn-outline-primary my-3">Submit</button>
-                </div>
+                @endguest
         </form>
 
     </div>

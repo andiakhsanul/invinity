@@ -33,14 +33,16 @@
 
     <!-- header-start -->
     <header>
-        <div  class="header-area ">
+        <div class="header-area ">
             <div id="sticky-header" class="main-header-area ">
                 <div class="container-fluid p-0">
                     <div class="row align-items-center justify-content-between no-gutters">
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo-img">
-                                <a style="color: white; font-size:large; font-weight: 600; font-family:poppins" href="#">
-                                    <img style="max-height: 60px; width: auto;" src="img/logo2.png" alt="" > Invinity
+                                <a style="color: white; font-size:large; font-weight: 600; font-family:poppins"
+                                    href="#">
+                                    <img style="max-height: 60px; width: auto;" src="img/logo2.png" alt="">
+                                    Invinity
                                 </a>
                             </div>
                         </div>
@@ -48,13 +50,12 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a  href="{{ route('landing')}}">Home</a></li>
+                                        <li><a href="{{ route('landing') }}">Home</a></li>
                                         <li><a href="{{ route('about') }}">About</a></li>
                                         <li><a href="#">Conference <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="{{ route('seminar.index') }}">Register</a></li>
-                                            </ul
-                                        </li>
+                                            </ul </li>
                                         <li><a href="#">Call Paper<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="{{ route('paper') }}">Submission</a></li>
@@ -66,9 +67,17 @@
                             </div>
                         </div>
                         <div class="col-md-2 d-none d-lg-block">
-                            <div class="buy_ticket">
-                                <a href="#" class="boxed-btn-white">Login</a>
-                            </div>
+                            @auth
+
+                                <div class="buy_ticket">
+                                    <a href="#" class="text-white">{{ Auth::user()->name }}</a>
+                                </div>
+                            @endauth
+                            @guest
+                                <div class="buy_ticket">
+                                    <a href="{{ route('auth.login') }}" class="boxed-btn-white">Login</a>
+                                </div>
+                            @endguest
                         </div>
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
