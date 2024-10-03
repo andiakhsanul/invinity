@@ -4,7 +4,8 @@
 <div style="margin-top: 50px" class="container-fluid py-5">
     <div class="container py-5">
         <h1 class="mb-4"></h1>
-        <form action="#">
+        <form action="{{ route('paper.submit') }}" method="post" id="paymentForm" enctype="multipart/form-data">
+            @csrf
             <div class="row g-5">
                 <div class="col-md-12 col-lg-6 col-xl-7">
                     <div class="table-responsive">
@@ -85,151 +86,165 @@
 
 
                 </div>
-                <form action="{{ route('paper.submit') }}" method="post">
-                    @csrf
-                    <div class="col-md-12 col-lg-6 col-xl-5">
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12">
-                                <div class="form-item">
-                                    <label class="form-label my-3">Full Name <sup>*</sup></label>
-                                    <input type="text" class="form-control" name="full_name">
+                <div class="col-md-12 col-lg-6 col-xl-5">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
                                 </div>
+                            @endif
+                            <div class="form-item">
+                                <label class="form-label my-3">Full Name <sup>*</sup></label>
+                                <input type="text" class="form-control" name="full_name" required>
                             </div>
-                            <div class="col-md-12 col-lg-6">
+                        </div>
+                        <div class="col-md-12 col-lg-6">
 
-                            </div>
                         </div>
-                        <div class="form-item">
-                            <label class="form-label my-3">Nationality <sup>*</sup></label>
-                            <input type="text" class="form-control" name="nationality">
-                        </div>
-                        <div class="form-item">
-                            <label class="form-label my-3">Country Of Residence<sup>*</sup></label>
-                            <input type="text" class="form-control" name="country_of_residence">
-                        </div>
-                        <div class="form-item">
-                            <label class="form-label my-3">Institution</label>
-                            <input type="text" class="form-control" name="institution">
-                        </div>
-                        <div class="form-item">
-                            <label class="form-label my-3">Profession</label>
-                            <div class="form-check">
-                                <input style="transform: scale(1.5);" class="form-check-input custom-radio"
-                                    type="radio" name="profession" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Lecturer
-                                </label>
-                            </div>
-
-                            <div class="form-check">
-                                <input style="transform: scale(1.5);" class="form-check-input custom-radio"
-                                    type="radio" name="profession" id="flexRadioDefault2">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Student
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-item">
-                            <label class="form-label my-3">Phone Number<sup>*</sup></label>
-                            <input type="tel" class="form-control" name="phone_number">
-                        </div>
-                        <div class="form-item">
-                            <label class="form-label my-3">Email<sup>*</sup></label>
-                            <input type="email" class="form-control" name="email">
-                        </div>
-                        <div class="form-item">
-                            <label class="form-label my-3">Student Number (for certificate)<sup>*</sup></label>
-                            <input type="email" class="form-control" name="student_number">
-                        </div>
-                        <div class="form-item">
-                            <label class="form-label my-3">Screenshot of proof of following
-                                Instagram<sup>*</sup></label>
-                            <input class="form-control" type="file" id="formFile" name="screenshot_proof">
-                        </div>
-
-                        <div class="form-item">
-                            <label class="form-label my-3">Payment</label>
-                            <div class="form-check">
-                                <input style="transform: scale(1.5);" class="form-check-input custom-radio"
-                                    type="radio" value="Paypal" name="payment" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    PAYPAL @pandikaardi
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input style="transform: scale(1.5);" class="form-check-input custom-radio"
-                                    type="radio" value="BRI" name="payment" id="flexRadioDefault2">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    BRI 314301036962538 (a.n. Lidya Laksmi)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input style="transform: scale(1.5);" class="form-check-input custom-radio"
-                                    type="radio" value="MANDIRI" name="payment" id="flexRadioDefault2">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    MANDIRI 1420020567409 (a.n. Irsyad Nur Fauzan)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input style="transform: scale(1.5);" class="form-check-input custom-radio"
-                                    type="radio" value="SEABANK" name="payment" id="flexRadioDefault2">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    SEA BANK 901750960444 (a.n. Alysia Amalia)
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-item">
-                            <label for="formFile" class="form-label my-3">Upload payment<sup>*</sup></label>
-                            <input class="form-control" name="payment_proof" type="file" id="formFile">
-                        </div>
-
-                        <button type="submit" class="btn btn-outline-primary my-3">Submit</button>
-                        <button type="submit" class="btn btn-outline-primary my-3">Submit</button>
                     </div>
-                </form>
+                    <div class="form-item">
+                        <label class="form-label my-3">Nationality <sup>*</sup></label>
+                        <input type="text" class="form-control" name="nationality" required>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Country Of Residence<sup>*</sup></label>
+                        <input type="text" class="form-control" name="country_of_residence" required>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Institution</label>
+                        <input type="text" class="form-control" name="institution">
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Profession</label>
+                        <div class="form-check">
+                            <input style="transform: scale(1.5);" class="form-check-input custom-radio" type="radio"
+                                name="profession" id="flexRadioDefault1" required>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Lecturer
+                            </label>
+                        </div>
 
+                        <div class="form-check">
+                            <input style="transform: scale(1.5);" class="form-check-input custom-radio" type="radio"
+                                name="profession" id="flexRadioDefault2" required>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Student
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Phone Number<sup>*</sup></label>
+                        <input type="tel" class="form-control" name="phone_number" required>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Email<sup>*</sup></label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Student Number (for certificate)<sup>*</sup></label>
+                        <input type="num" class="form-control" name="student_number" required>
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label my-3">Screenshot of proof of following
+                            Instagram<sup>*</sup></label>
+                        <input class="form-control" type="file" id="formFile" name="screenshot_proof" required>
+                    </div>
 
-            </div>
-        </div>
+                    <div class="form-item">
+                        <label class="form-label my-3" for="paymentDropdown">Payment</label>
+                        <select class="form-select" id="paymentDropdown" name="payment_methods"
+                            aria-label="Payment options" required>
+                            <option selected disabled>Select Payment Method</option>
+                            <option value="Paypal">PAYPAL @pandikaardi</option>
+                            <option value="BRI">BRI 314301036962538 (a.n. Lidya Laksmi)</option>
+                            <option value="MANDIRI">MANDIRI 1420020567409 (a.n. Irsyad Nur Fauzan)</option>
+                            <option value="SEABANK">SEA BANK 901750960444 (a.n. Alysia Amalia)</option>
+                        </select>
+                    </div>
 
+                    <div class="form-item">
+                        <label for="formFile" class="form-label my-3">Upload payment<sup>*</sup></label>
+                        <input class="form-control" name="payment_proof" type="file" id="formFile" required>
+                    </div>
 
-        <script>
-          function showAlert() {
-    swal({
-        title: "INVINITY (International Conference Visual, Nature, Serenity)",
-        content: {
-            element: "div",
-            attributes: {
-                innerHTML: "We have received your registration.<br>Contact Persons:<br>Call Paper +62 895-1755-5799 (Aisya)"
-            },
-            icon: "success",
-            button: "Ok!",
-        }).then((willRefresh) => {
-            if (willRefresh) {
-                // Submit the form programmatically
-                document.getElementById("paymentForm").submit();
+                    <button type="submit" class="btn btn-outline-primary my-3">Submit</button>
+                </div>
+        </form>
 
-                // Refresh after 1 second to give time for the modal to be displayed
-                setTimeout(function() {
-                    location.reload();
-                }, 1000);
-            }
+    </div>
+
+</div>
+</form>
+</div>
+@include('partial.footer')
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#paymentForm').on('submit', function(e) {
+            e.preventDefault();
+
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: '{{ route('paper.submit') }}',
+                data: formData,
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                dataType: 'json',
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            title: "Are you sure?",
+                            text: "You won't be able to revert this!",
+                            icon: "warning",
+                            showCancelButton: true,
+                            confirmButtonColor: "#3085d6",
+                            cancelButtonColor: "#d33",
+                            confirmButtonText: "Yes, upload it!"
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                Swal.fire({
+                                    title: "INVINITY (International Conference Visual, Nature, Serenity)",
+                                    html: `We have received your registration.<br>Contact Persons:<br>Call Paper +62 895-1755-5799 (Aisya)`,
+                                    icon: "success"
+                                });
+                            }
+                        });
+                    } else {
+                        Swal.fire({
+                            title: "Error",
+                            text: response.error,
+                            icon: "error"
+                        });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    Swal.fire({
+                        title: "Error",
+                        text: "There was an issue submitting the paper. Please try again.",
+                        icon: "error"
+                    });
+                    console.log(xhr.responseText);
+                }
+            });
+
         });
-    }
-</script> --}}
+    });
+</script>
 
 
 </body>
 
-    </body>
-    </html>
-    @include('partial.footer')
+</body>
+
+</html>
+@include('partial.footer')

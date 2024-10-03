@@ -29,7 +29,7 @@
                     <span class="hide-menu">Paper</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="/admin/papers" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('paper.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-article"></i>
                         </span>
