@@ -30,6 +30,8 @@ Route::prefix('admin')->middleware(AdminMiddleware::class)->group(function () {
         return view('admin.dashboard');
     })->name('dashboard');
 
+    Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout.admin');
+
     // Papers
     Route::get('/papers/all', [papercontroller::class, 'index'])->name('paper.index');
     Route::get('/paper/edit/{id}', [papercontroller::class, 'edit'])->name('paper.edit');
@@ -51,7 +53,3 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 Route::get('/kirimemail', [PaymentConfirmationEmail::class, 'index']);
 Route::get('/send-email', [papercontroller::class, 'sendEmail'])->name('paper.sendEmail');
-
-
-
-
