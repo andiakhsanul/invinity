@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('role')->default(1);
+            $table->integer('role')->default(2);
             $table->unsignedBigInteger('submission_id')->nullable(); // Foreign key for paper
             $table->unsignedBigInteger('seminar_id')->nullable();    // Foreign key for seminar
             $table->rememberToken();

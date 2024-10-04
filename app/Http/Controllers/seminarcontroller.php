@@ -42,8 +42,11 @@ class seminarcontroller extends Controller
 
         // Proses upload gambar screenshot proof
         if ($request->hasFile('screenshot_proof')) {
-            $imageName = time() . '.' . $request->screenshot_proof->extension();
-            $request->screenshot_proof->move(public_path('uploads/seminar'), $imageName);
+            // Generate a unique filename
+            $screenshotProofName = time() . '.' . $request->screenshot_proof->extension();
+        
+            // Store the file in the 'uploads/screenshot_proof' directory on the 'public' disk
+            $request->screenshot_proof->storeAs('uploads/screenshot_proof', $screenshotProofName, 'public');
         }
 
         // Membuat seminar baru
@@ -55,7 +58,7 @@ class seminarcontroller extends Controller
             'phone_number' => $request->phone_number,
             'email' => $request->email,
             'student_number' => $request->student_number,
-            'screenshot_proof' => $imageName,
+            'screenshot_proof' => $screenshotProofName,
             'nationality' => $request->nationality,
             'user_id' => Auth::user()->id, // Mengambil user_id dari user yang sedang login
         ]);

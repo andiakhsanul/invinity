@@ -62,6 +62,11 @@
                                                 <li><a href="{{ route('guide') }}">Guide Paper</a></li>
                                             </ul>
                                         </li>
+                                        @auth
+                                            @if (Auth::user()->role === 1)
+                                                <li><a href="{{ route('dashboard') }}">Dashboard Admin</a></li>
+                                            @endif
+                                        @endauth
                                     </ul>
                                 </nav>
                             </div>
