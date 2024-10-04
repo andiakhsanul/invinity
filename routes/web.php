@@ -29,6 +29,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/papers/all', [papercontroller::class, 'index'])->name('paper.index');
     Route::get('/paper/edit/{id}', [papercontroller::class, 'edit'])->name('paper.edit');
     Route::put('/paper/update', [papercontroller::class, 'update'])->name('paper.update');
+    Route::get('/paper/delete/{id}', [papercontroller::class, 'delete'])->name('paper.delete');
     Route::get('/paper/approve/{id}', [papercontroller::class, 'showApprove'])->name('paper.approve');
     Route::put('/paper/update-status/{id}', [papercontroller::class, 'approve'])->name('paper.approved');
 
@@ -60,6 +61,7 @@ Route::prefix('auth')->name('auth.')->group(function () {
 
 Route::get('/kirimemail',[PaymentConfirmationEmail::class, 'index']);
 Route::post('/paper/submit', [papercontroller::class, 'submit'])->name('paper.submit');
+Route::get('/send-email', [papercontroller::class, 'sendEmail'])->name('paper.sendEmail');
 
 
 

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PaymentConfirmationEmail;
 use App\Models\papermodel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class papercontroller extends Controller
 {
@@ -19,6 +21,12 @@ class papercontroller extends Controller
         $payment_detail = papermodel::find($id);
         return view('admin.paper.approve', compact('payment_detail'));
     }
+    public function delete(Request $request, $id)
+    {
+        $data = papermodel::find($id);
+        $data->delete();
+        return redirect()->route('paper.index')->with('success', 'Successfully Deleted');
+    }
     public function approve(Request $request, $id)
     {
 
@@ -26,8 +34,15 @@ class papercontroller extends Controller
         $payment->status = $request->input('status');
         $payment->reason = $request->input('reason');
         $payment->save();
-        
+
         return redirect()->route('paper.index')->with('success', 'Successfully approved ' . $payment->full_name);
+    }
+
+    public function sendEmail()
+    {
+        Mail::to('alifadiawan2005@gmail.com')->send(new PaymentConfirmationEmail());
+
+        return "Email has been sent to alifadiawan2005@gmail.com";
     }
 
     public function submit(Request $request)
@@ -97,7 +112,7 @@ class papercontroller extends Controller
         if ($paper->status === 2) {
             return redirect()->back()->with('error', 'Your payment was declined. Go to Submission Page for more detail');
         }
-        
+
         // Handle document upload
         if ($request->hasFile('document')) {
 

@@ -57,10 +57,10 @@
                     <strong>Reason:</strong> <span>{{ $payment_detail->reason }}</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                    <strong>Document:</strong> <span>{{ $payment_detail->document }}</span>
+                    <strong>Document:</strong> <span><a target="_blank" href="{{ Storage::url($payment_detail->document) }}">View Documents</a></span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                    <strong>Poster:</strong> <span>{{ $payment_detail->poster }}</span>
+                    <strong>Poster:</strong> <span><a target="_blank" href="{{ Storage::url($payment_detail->poster) }}">View Poster</a></span>
                 </li>
             </ul>
             <form action="{{ route('paper.approved', $payment_detail->id) }}" method="post" class="mt-3 text-center">
@@ -69,6 +69,7 @@
                 <div class="d-flex gap-2">
                     <button type="submit" name="status" value="1" class="btn btn-success w-100">Approve</button>
                     <a href="{{ route('paper.index') }}" class="btn btn-outline-secondary">Cancel</a>
+                    <a href="{{ route('paper.delete', $payment_detail->id) }}" class="btn ">Delete</a>
                 </div>
             </form>
             <form action="{{ route('paper.approved', $payment_detail->id) }}" method="post" class="mt-3 text-center">
