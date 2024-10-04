@@ -20,6 +20,6 @@ class GuestMiddleware
             return $next($request);
         }
 
-        return redirect()->back();
+        return redirect('/');
     }
 }
