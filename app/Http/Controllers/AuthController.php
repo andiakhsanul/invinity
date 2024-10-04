@@ -24,11 +24,11 @@ class AuthController extends Controller
 
             if (Auth::user()->role === 1) {
                 return redirect('/');
+            }else{
+                return redirect()->route('dashboard');
             }
-
-            return redirect()->route('dashboard');
         }
-    
+
         return redirect()->back()->with('error', "Email or Password doesn't match");
 
     }
