@@ -43,9 +43,8 @@
                             <div class="d-flex flex-column">
                                 <h3>You have already submitted at <span
                                         class="text-primary">{{ $hasSeminars->first()->created_at }}</span></h3>
-                                <a href="{{ Storage::url($hasSeminars->first()->screenshot_proof) }}"
-                                    class="btn btn-outline-secondary"
-                                    target="_blank">{{ $hasSeminars->first()->screenshot_proof }}</a>
+                                <a href="{{ Storage::url('uploads/screenshot_proof/' . $hasSeminars->first()->screenshot_proof) }}"
+                                    class="btn btn-outline-secondary" target="_blank">View</a>
                                 <p>Contact if you want to edit your submission</p>
                             </div>
                         </div>

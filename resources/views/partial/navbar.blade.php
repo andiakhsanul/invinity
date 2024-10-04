@@ -62,15 +62,19 @@
                                                 <li><a href="{{ route('guide') }}">Guide Paper</a></li>
                                             </ul>
                                         </li>
+                                        @auth
+                                            @if (Auth::user()->role === 1)
+                                                <li><a href="{{ route('dashboard') }}">Dashboard Admin</a></li>
+                                            @endif
+                                        @endauth
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="col-md-2 d-none d-lg-block">
                             @auth
-
                                 <div class="buy_ticket">
-                                    <a href="#" class="text-white">{{ Auth::user()->name }}</a>
+                                    <a href="{{ route('auth.logout') }}" class="text-white">{{ Auth::user()->name }}</a>
                                 </div>
                             @endauth
                             @guest

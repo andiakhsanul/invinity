@@ -49,31 +49,6 @@
                         <span class="hide-menu">All Seminars</span>
                     </a>
                 </li>
-                
-                <li class="nav-small-cap">
-                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                    <span class="hide-menu">Participant </span>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="/admin/participants" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-mood-happy"></i>
-                        </span>
-                        <span class="hide-menu">All Participants</span>
-                    </a>
-                </li>
-                <li class="nav-small-cap">
-                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                    <span class="hide-menu">Payment</span>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="/admin/all-payment" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-aperture"></i>
-                        </span>
-                        <span class="hide-menu">All Payments</span>
-                    </a>
-                </li>
             </ul>
             
         </nav>

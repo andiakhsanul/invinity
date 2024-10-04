@@ -28,7 +28,7 @@ class PaymentConfirmationEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Payment Confirmation Email',
+            subject: 'Payment Confirmation SENT',
         );
     }
 
@@ -52,12 +52,11 @@ class PaymentConfirmationEmail extends Mailable
         return [];
     }
 
-    public function index()
+    public function build()
     {
-        // Send email to alifadiawan2005@gmail.com
-        Mail::to("alifadiawan2005@gmail.com")->send(new PaymentConfirmationEmail());
-
-        return "Email has been sent to alifadiawan2005@gmail.com";
+        return $this->from('no-reply@invinity.com')
+                    ->subject('Payment Confirmation Sent')
+                    ->view('admin.email');
     }
 
 }

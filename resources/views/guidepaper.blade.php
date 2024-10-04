@@ -160,7 +160,7 @@
                     <label for="formFile" class="form-label">Upload Poster:</label>
                     @auth
                         @if ($hasDocument && is_null($hasDocument->document) && is_null($hasDocument->poster))
-                            <input class="form-control" name="document" type="file" id="formFile" required>
+                            <input class="form-control" name="poster" type="file" id="formFile" required>
                         @else
                             <div class="d-flex flex-column">
                                 @if ($hasDocument)
