@@ -22,9 +22,9 @@ class AuthController extends Controller
 
         if (Auth::attempt($data)) {
 
-            if (Auth::user()->role === 1) {
+            if (Auth::user()->role === 2) {
                 return redirect('/');
-            }else{
+            }elseif(Auth::user()->role === 1){
                 return redirect()->route('dashboard');
             }
         }
