@@ -47,24 +47,17 @@
 
     <div class="email-container">
         <div class="email-header">
-            <h1>Payment Confirmation Uploaded</h1>
+            <h1>Payment Confirmation</h1>
         </div>
 
         <div class="email-content">
-            <p>Dear <strong>[Customer Name]</strong>,</p>
-            <p>We are pleased to inform you that your payment confirmation has been successfully uploaded. Our team is
-                currently reviewing the submitted details.</p>
-            <p>Please allow <strong>[X] business days</strong> for the verification process. Once your payment has been
-                confirmed, we will send you a follow-up email with the next steps.</p>
-            <p>If you have any questions, feel free to contact us at <a href="mailto:[Support Email]">[Support Email]</a>
-                or call us at <strong>[Support Phone Number]</strong>.</p>
-            <p>Thank you for your prompt action, and we appreciate your trust in <strong>[Company Name]</strong>.</p>
+            <p>Dear <strong>{{ $data['full_name'] }}</strong>,</p>
+            <p>We are happy to inform you that your payment confirmation has been <strong style="color: green">Approved</strong>.</p>
+            <p>Please contact our us at <strong>+62 857-3218-6497</strong>.</p>
+            <p>Please contact our us at <strong>+62 857-3218-6497</strong>.</p>
+            <p>Thank you for your prompt action, and we appreciate your trust in <strong>INVINITY TEAM 2024</strong>.</p>
         </div>
 
-        <div class="email-footer">
-            <p>Best regards,<br>[Your Name] - [Your Position]<br>[Company Name]</p>
-            <p><a href="mailto:[Company Email]">[Company Email]</a> | [Company Phone Number]</p>
-        </div>
     </div>
 
 </body>

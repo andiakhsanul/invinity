@@ -87,6 +87,11 @@
                 @if ($hasPapers->isNotEmpty())
                     <div class="col-md-12 col-lg-6 col-xl-5">
                         <div class="d-flex flex-column">
+                            @if (session('sent'))
+                                <div class="alert alert-success">
+                                    <p>{{ session('sent') }}</p>
+                                </div>
+                            @endif
                             <h3>You have already submitted at <span
                                     class="text-primary">{{ $hasPapers->first()->created_at }}</span></h3>
                             <h5>Status:
@@ -228,47 +233,48 @@
 
             var formData = new FormData(this);
 
-            $.ajax({
-                url: '{{ route('paper.submit') }}',
-                data: formData,
-                processData: false,
-                contentType: false,
-                type: 'POST',
-                dataType: 'json',
-                success: function(response) {
-                    if (response.success) {
-                        Swal.fire({
-                            title: "Are you sure?",
-                            text: "You won't be able to revert this!",
-                            icon: "warning",
-                            showCancelButton: true,
-                            confirmButtonColor: "#3085d6",
-                            cancelButtonColor: "#d33",
-                            confirmButtonText: "Yes, upload it!"
-                        }).then((result) => {
-                            if (result.isConfirmed) {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, upload it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // If the user confirms, submit the form via AJAX
+                    $.ajax({
+                        url: '{{ route('paper.submit') }}',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        type: 'POST',
+                        dataType: 'json',
+                        success: function(response) {
+                            if (response.success) {
                                 Swal.fire({
                                     title: "INVINITY (International Conference Visual, Nature, Serenity)",
                                     html: `We have received your registration.<br>Contact Persons:<br>Call Paper +62 895-1755-5799 (Aisya)`,
                                     icon: "success"
                                 });
+                            } else {
+                                Swal.fire({
+                                    title: "Error",
+                                    text: response.error,
+                                    icon: "error"
+                                });
                             }
-                        });
-                    } else {
-                        Swal.fire({
-                            title: "Error",
-                            text: response.error,
-                            icon: "error"
-                        });
-                    }
-                },
-                error: function(xhr, status, error) {
-                    Swal.fire({
-                        title: "Error",
-                        text: "There was an issue submitting the paper. Please try again.",
-                        icon: "error"
+                        },
+                        error: function(xhr, status, error) {
+                            Swal.fire({
+                                title: "Error",
+                                text: "There was an issue submitting the paper. Please try again.",
+                                icon: "error"
+                            });
+                            console.log(xhr.responseText);
+                        }
                     });
-                    console.log(xhr.responseText);
                 }
             });
 

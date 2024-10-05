@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ApprovedPaperEmail;
+use App\Mail\DeclinedPaperEmail;
 use App\Mail\PaymentConfirmationEmail;
 use App\Models\papermodel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class papercontroller extends Controller
 {
@@ -30,19 +33,25 @@ class papercontroller extends Controller
     public function approve(Request $request, $id)
     {
 
-        $payment = papermodel::find($id);
+        $data = $payment = papermodel::find($id);
         $payment->status = $request->input('status');
         $payment->reason = $request->input('reason');
         $payment->save();
+
+        // if ($request->status === 1) {
+        //     Mail::to('alif.adiawan-2023@vokasi.unair.ac.id')->send(new ApprovedPaperEmail($data)); 
+        // } else {
+        //     Mail::to('alif.adiawan-2023@vokasi.unair.ac.id')->send(new DeclinedPaperEmail($data));
+        // }
 
         return redirect()->route('paper.index')->with('success', 'Successfully approved ' . $payment->full_name);
     }
 
     public function sendEmail()
     {
-        Mail::to('alifadiawan2005@gmail.com')->send(new PaymentConfirmationEmail());
+        // Mail::to('alif.adiawan-2023@vokasi.unair.ac.id')->send(new PaymentConfirmationEmail());
 
-        return "Email has been sent to alifadiawan2005@gmail.com";
+        return "Email has been sent to alif.adiawan-2023@vokasi.unair.ac.id";
     }
 
     public function submit(Request $request)
@@ -89,7 +98,7 @@ class papercontroller extends Controller
                 'user_id' => Auth::user()->id,
             ];
 
-            // Store the paper submission in the database
+           
             try {
                 PaperModel::create($paper);
                 return response()->json(['success' => true, 'message' => 'Paper Successfully Submitted']);

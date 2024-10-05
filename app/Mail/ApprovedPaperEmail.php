@@ -8,12 +8,10 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Mail;
 
-class PaymentConfirmationEmail extends Mailable
+class ApprovedPaperEmail extends Mailable
 {
     use Queueable, SerializesModels;
-
     public $data;
     /**
      * Create a new message instance.
@@ -29,7 +27,7 @@ class PaymentConfirmationEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Payment Confirmation SENT',
+            subject: 'Payment Confirmation Approved',
         );
     }
 
@@ -39,7 +37,7 @@ class PaymentConfirmationEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'email.email',
+            view: 'email.approved',
         );
     }
 
@@ -55,7 +53,6 @@ class PaymentConfirmationEmail extends Mailable
 
     public function build()
     {
-        return $this->view('email.email')->with('data', $this->data);
+        return $this->from('alif.adiawan-2023@vokasi.unair.ac.id')->view('email.approved')->with('data', $this->data);
     }
-
 }
