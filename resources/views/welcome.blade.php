@@ -114,6 +114,43 @@
     </div>
 </div>
 
+
+
+<div class="faq_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="serction_title_large mb-95">
+                    <h3>
+                        Poster
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card text-center"> <!-- Tambahkan class text-center -->
+                    <div class="card-header" id="headingPoster">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapsePoster"
+                                aria-expanded="true" aria-controls="collapsePoster">
+                                <img src="img/speakers/1.jpg" alt="" class="img-fluid" style="max-width: 100%; height: auto;"> <!-- Pastikan gambar responsive -->
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapsePoster" class="collapse show" aria-labelledby="headingPoster">
+                        <div class="card-body">
+                            This is a detailed description of the poster. You can add more information here, such as the purpose, design elements, or any other relevant content.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!-- speakers_start -->
 <div class="speakers_area">
     <h1 class="horizontal_text d-none d-lg-block">
@@ -133,70 +170,34 @@
             <div class="col-xl-5 col-md-6">
                 <div class="single_speaker">
                     <div class="speaker_thumb">
-                        <img src="img/speakers/1.png" alt="">
-                        <div class="hover_overlay">
+                        <img src="img/speakers/1.jpg" alt="">
+                        {{-- <div class="hover_overlay">
                             <div class="social_icon">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="speaker_name text-center">
-                        <h3>Jonson Miller</h3>
-                        <p>Creative Director</p>
+                        <h3>André Sylvestre, MSc</h3>
+                        <p>Senior Corporate Advisor, Phoenix Corporate Finance, Toronto, Ontario, Canada</p>
                     </div>
                 </div>
-                <div class="single_speaker">
-                    <div class="speaker_thumb">
-                        <img src="img/speakers/3.png" alt="">
-                        <div class="hover_overlay">
-                            <div class="social_icon">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="speaker_name text-center">
-                        <h3>Albert Jackey</h3>
-                        <p>Product Designer</p>
-                    </div>
-                </div>
+
             </div>
             <div class="col-xl-5 offset-xl-2 col-md-6">
                 <div class="single_speaker">
                     <div class="speaker_thumb">
-                        <img src="img/speakers/2.png" alt="">
-                        <div class="hover_overlay">
-                            <div class="social_icon">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </div>
-                        </div>
+                        <img src="img/speakers/2.jpg" alt="">
+
                     </div>
                     <div class="speaker_name text-center">
-                        <h3>Marked Macau</h3>
-                        <p>UI/UX Designer</p>
+                        <h3>Dr. A. Faidlal Rahman, SE.Par., M.Sc., CHE.</h3>
+                        <p>Dosen Universitas Brawijaya</p>
                     </div>
                 </div>
-                <div class="single_speaker">
-                    <div class="speaker_thumb">
-                        <img src="img/speakers/1.png" alt="">
-                        <div class="hover_overlay">
-                            <div class="social_icon">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="speaker_name text-center">
-                        <h3>Kelvin Cooper</h3>
-                        <p>Art Director</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -237,100 +238,8 @@
     </div>
     <!-- brand_area_end --> --}}
 
-<!-- faq_area_Start -->
-<div class="faq_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="serction_title_large mb-95">
-                    <h3>
-                        Frequently Ask
-                    </h3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-12">
-                <div id="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 
-                                    <img src="img/barnd/info.png" alt=""> Is WordPress hosting worth it?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion"
-                            style="">
-                            <div class="card-body">
-                                Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                let god moving. Moving in fourth air night bring upon
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                    aria-expanded="true" aria-controls="collapseOne">
-                                    <img src="img/barnd/info.png" alt="">What are the advantages <span>of
-                                        WordPress
-                                        hosting over shared?</span>
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-parent="#accordion" style="">
-                            <div class="card-body">
-                                Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                let god moving. Moving in fourth air night bring upon
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <img src="img/barnd/info.png" alt=""> Where the Venue?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordion" style="">
-                            <div class="card-body">
-                                Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                let god moving. Moving in fourth air night bring upon
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="heading_4">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse"
-                                    data-target="#collapse_4" aria-expanded="false" aria-controls="collapse_4">
-                                    <img src="img/barnd/info.png" alt=""> How can I attend <span>the Event
-                                        from
-                                        Asia?</span>
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapse_4" class="collapse" aria-labelledby="heading_4" data-parent="#accordion"
-                            style="">
-                            <div class="card-body">
-                                Our set he for firmament morning sixth subdue darkness creeping gathered divide our
-                                let god moving. Moving in fourth air night bring upon
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- faq_area_end -->
+
 
 
 @include('partial.footer')
