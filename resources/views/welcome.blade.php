@@ -134,13 +134,20 @@
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapsePoster"
                                 aria-expanded="true" aria-controls="collapsePoster">
-                                <img src="img/speakers/1.jpg" alt="" class="img-fluid" style="max-width: 100%; height: auto;"> <!-- Pastikan gambar responsive -->
+                                <img src="img/poster.png" alt="" class="img-fluid" style="width: 100%;"> <!-- Pastikan gambar responsive dan memenuhi lebar penuh -->
                             </button>
                         </h5>
                     </div>
                     <div id="collapsePoster" class="collapse show" aria-labelledby="headingPoster">
                         <div class="card-body">
-                            This is a detailed description of the poster. You can add more information here, such as the purpose, design elements, or any other relevant content.
+                            International Conference Visual Nature Serenity (INVINITY). The first International Conference of the Digital Office Management Study Program
+                            Digital Office Management, Faculty of Vocational Studies, Universitas Airlangga.
+
+                            This conference will include an international seminar with the theme "Tourism Transformation: Innovation, Trends, and Business Strategies for Sustainable Growth," as well as a Paper Competition with the theme "Applied Business Science."
+
+                            For those participating in the paper competition, authors are expected to submit a complete paper and scientific poster using the template provided. Submission of papers and posters is mandatory for those participating in the paper competition. The best papers will be published in November 2025 / April 2026 in Tijab after going through a thorough review process and meeting journal criteria.
+
+                            The 1st INVINITY will be held virtually on November 16, 2024.
                         </div>
                     </div>
                 </div>
@@ -153,9 +160,6 @@
 
 <!-- speakers_start -->
 <div class="speakers_area">
-    <h1 class="horizontal_text d-none d-lg-block">
-        Speakers
-    </h1>
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -171,13 +175,6 @@
                 <div class="single_speaker">
                     <div class="speaker_thumb">
                         <img src="img/speakers/1.jpg" alt="">
-                        {{-- <div class="hover_overlay">
-                            <div class="social_icon">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </div>
-                        </div> --}}
                     </div>
                     <div class="speaker_name text-center">
                         <h3>André Sylvestre, MSc</h3>
@@ -204,6 +201,270 @@
 </div>
 <!-- speakers_end-->
 
+
+<!-- speakers_start -->
+<div class="speakers_area">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="serction_title_large mb-95">
+                    <h3>
+                        Moderators
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-5 col-md-6">
+                <div class="single_speaker">
+                    <div class="speaker_thumb">
+                        <img src="img/speakers/3.jpg" alt="">
+                    </div>
+                    <div class="speaker_name text-center">
+                        <h3>Ir. I Dewa Made Widia, MT.</h3>
+                        <p>Lecturer at Universitas Brawijaya</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-5 offset-xl-2 col-md-6">
+                <div class="single_speaker">
+                    <div class="speaker_thumb">
+                        <img src="img/speakers/4.jpg" alt="">
+
+                    </div>
+                    <div class="speaker_name text-center">
+                        <h3>Dr. Rahmat Yuliawan., SE., MM., AWP., CHRM., CPM Asia</h3>
+                        <p>Head of Study Program D4 Digital Office Management<br>Universitas Airlangga - Indonesia</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- speakers_end-->
+
+<!-- faq_area_Start -->
+<div class="faq_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="serction_title_large mb-95">
+                    <h3>
+                        Frequently Asked Questions
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div id="accordion">
+
+                    <!-- Seminar FAQ Heading -->
+                    <div class="faq_section_heading">
+                        <h4>Seminar FAQs</h4>
+                    </div>
+
+                    <!-- Seminar FAQ 1 -->
+                    <div class="card">
+                        <div class="card-header" id="headingOneSeminar">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneSeminar"
+                                    aria-expanded="true" aria-controls="collapseOneSeminar">
+                                    <img src="img/barnd/info.png" alt=""> What is Invinity (International Conference Visual Nature Serenity)?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOneSeminar" class="collapse show" aria-labelledby="headingOneSeminar" data-parent="#accordion">
+                            <div class="card-body">
+                                Invinity is an international conference event to share knowledge and experiences in the field of Transforming Tourism: Innovative Trends and Business Strategies for Sustainable Growth, with speakers and participants from various countries.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seminar FAQ 2 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwoSeminar">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoSeminar"
+                                    aria-expanded="false" aria-controls="collapseTwoSeminar">
+                                    <img src="img/barnd/info.png" alt=""> Who can register for this international conference?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwoSeminar" class="collapse" aria-labelledby="headingTwoSeminar" data-parent="#accordion">
+                            <div class="card-body">
+                                This international conference is open to all international students, and academics who are interested in "Tourism Transformation: Innovation, Trends, and Business Strategies for Sustainable Growth".
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seminar FAQ 3 -->
+                    <div class="card">
+                        <div class="card-header" id="headingThreeSeminar">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThreeSeminar"
+                                    aria-expanded="false" aria-controls="collapseThreeSeminar">
+                                    <img src="img/barnd/info.png" alt=""> How to register?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThreeSeminar" class="collapse" aria-labelledby="headingThreeSeminar" data-parent="#accordion">
+                            <div class="card-body">
+                                You can register via the registration form available on our website. Please make sure to fill in all the required information.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seminar FAQ 4 -->
+                    <div class="card">
+                        <div class="card-header" id="headingFourSeminar">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFourSeminar"
+                                    aria-expanded="false" aria-controls="collapseFourSeminar">
+                                    <img src="img/barnd/info.png" alt=""> Is there a registration fee for this international conference?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFourSeminar" class="collapse" aria-labelledby="headingFourSeminar" data-parent="#accordion">
+                            <div class="card-body">
+                                No, but if you want to participate in the paper competition and poster competition, there will be a fee.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seminar FAQ 5 -->
+                    <div class="card">
+                        <div class="card-header" id="headingFiveSeminar">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFiveSeminar"
+                                    aria-expanded="false" aria-controls="collapseFiveSeminar">
+                                    <img src="img/barnd/info.png" alt=""> Is there a limit to the number of participants?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFiveSeminar" class="collapse" aria-labelledby="headingFiveSeminar" data-parent="#accordion">
+                            <div class="card-body">
+                                Yes, the number of participants is limited to maintain effective interaction. Registration will be closed once the quota is met.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seminar FAQ 6 -->
+                    <div class="card">
+                        <div class="card-header" id="headingSixSeminar">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSixSeminar"
+                                    aria-expanded="false" aria-controls="collapseSixSeminar">
+                                    <img src="img/barnd/info.png" alt=""> Will this seminar be held online or offline?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSixSeminar" class="collapse" aria-labelledby="headingSixSeminar" data-parent="#accordion">
+                            <div class="card-body">
+                                This seminar will be held online via Zoom.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper Competition Heading -->
+                    <div class="faq_section_heading">
+                        <h4>Paper Competition FAQs</h4>
+                    </div>
+
+                    <!-- Paper FAQ 1 -->
+                    <div class="card">
+                        <div class="card-header" id="headingOnePaper">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOnePaper"
+                                    aria-expanded="true" aria-controls="collapseOnePaper">
+                                    <img src="img/barnd/info.png" alt=""> Is it okay to upload works that I made several years ago?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOnePaper" class="collapse" aria-labelledby="headingOnePaper" data-parent="#accordion">
+                            <div class="card-body">
+                                No, it is not. The works entered in this competition must be new works and have never been entered in any competition.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper FAQ 2 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwoPaper">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoPaper"
+                                    aria-expanded="false" aria-controls="collapseTwoPaper">
+                                    <img src="img/barnd/info.png" alt=""> Can I submit more than 1 work in one competition?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwoPaper" class="collapse" aria-labelledby="headingTwoPaper" data-parent="#accordion">
+                            <div class="card-body">
+                                Only 1 work is required in the form of paper and poster submissions for each participant.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper FAQ 3 -->
+                    <div class="card">
+                        <div class="card-header" id="headingThreePaper">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThreePaper"
+                                    aria-expanded="false" aria-controls="collapseThreePaper">
+                                    <img src="img/barnd/info.png" alt=""> Are paper competition participants required to participate in the poster competition?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThreePaper" class="collapse" aria-labelledby="headingThreePaper" data-parent="#accordion">
+                            <div class="card-body">
+                                Of course, because the poster competition will be used as a substitute for the presentation of the paper that the participants have made.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper FAQ 4 -->
+                    <div class="card">
+                        <div class="card-header" id="headingFourPaper">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFourPaper"
+                                    aria-expanded="false" aria-controls="collapseFourPaper">
+                                    <img src="img/barnd/info.png" alt=""> When do participants attach their work after registering?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFourPaper" class="collapse" aria-labelledby="headingFourPaper" data-parent="#accordion">
+                            <div class="card-body">
+                                Registration and collection of works have the same deadline. Participants can immediately submit their work after registering until the deadline on November 1, 2024.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper FAQ 5 -->
+                    <div class="card">
+                        <div class="card-header" id="headingFivePaper">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFivePaper"
+                                    aria-expanded="false" aria-controls="collapseFivePaper">
+                                    <img src="img/barnd/info.png" alt=""> When will the competition announcement be made?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFivePaper" class="collapse" aria-labelledby="headingFivePaper" data-parent="#accordion">
+                            <div class="card-body">
+                                The announcement of the competition will be made on November 16, 2024 in conjunction with the International Conference.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- faq_area_end -->
 
 
 {{--
