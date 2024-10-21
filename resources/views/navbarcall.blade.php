@@ -61,6 +61,12 @@
                                                     <li><a href="{{ route('guide') }}">Guide Paper</a></li>
                                                 </ul>
                                             </li>
+                                            <li><a href="#">pass conferencer<i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="#">INVINITY 2025</a></li>
+                                                <li><a href="#">INVINITY 2024</a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>

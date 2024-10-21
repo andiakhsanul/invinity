@@ -62,6 +62,12 @@
                                                 <li><a href="{{ route('guide') }}">Guide Paper</a></li>
                                             </ul>
                                         </li>
+                                        <li><a href="#">pass conference<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="#">INVINITY 2025</a></li>
+                                                <li><a href="#">INVINITY 2024</a></li>
+                                            </ul>
+                                        </li>
                                         @auth
                                             @if (Auth::user()->role === 1)
                                                 <li><a href="{{ route('dashboard') }}">Dashboard Admin</a></li>
