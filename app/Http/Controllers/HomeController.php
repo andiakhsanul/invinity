@@ -44,4 +44,8 @@ class HomeController extends Controller
         return view('conference', compact('hasSeminars'));
     }
 
+    public function pascon(){
+        return view('invinity2024');
+    }
+
 }
