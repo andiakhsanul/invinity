@@ -48,4 +48,8 @@ class HomeController extends Controller
         return view('invinity2024');
     }
 
+    public function Commite(){
+        return view('commite');
+    }
+
 }

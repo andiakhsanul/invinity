@@ -15,7 +15,7 @@ Route::get('/paper', [HomeController::class, 'paper'])->name('paper');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/guide', [HomeController::class, 'guide'])->name('guide');
 Route::get('/guest/seminar', [HomeController::class, 'seminar'])->name('seminar.index');
-
+Route::get('commite', [HomeController::class, 'Commite'])->name('commite');
 
 Route::post('/seminar/store', [seminarController::class, 'store'])->name('seminar.store');
 Route::put('/paper/update', [papercontroller::class, 'update'])->name('paper.update');

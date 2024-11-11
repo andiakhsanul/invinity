@@ -49,7 +49,12 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a  href="{{ route('landing')}}">Home</a></li>
-                                            <li><a href="{{ route('about') }}">About</a></li>
+                                            <li><a href="#">About<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="{{ route('commite') }}">Commite</a></li>
+                                                <li><a href="{{ route('about') }}">This is invinity</a></li>
+                                            </ul>
+                                        </li>
                                             <li><a href="#">Conference <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     <li><a href="{{ route('seminar.index') }}">Register</a></li>
