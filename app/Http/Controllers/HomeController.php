@@ -52,4 +52,8 @@ class HomeController extends Controller
         return view('commite');
     }
 
+    public function Proceeding(){
+        return view('proceeding');
+    }
+
 }

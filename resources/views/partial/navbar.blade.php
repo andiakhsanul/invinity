@@ -70,7 +70,7 @@
                                         <li><a href="#">pass conference<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="#">INVINITY 2025</a></li>
-                                                <li><a href="#">INVINITY 2024</a></li>
+                                                <li><a href="{{ route('proceeding') }}">INVINITY 2024</a></li>
                                             </ul>
                                         </li>
                                         @auth
